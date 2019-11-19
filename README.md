@@ -30,8 +30,9 @@ Create a folder structure of Strings as following (similar to that of Android Pr
 *IMPORTANT: each strings.xml must have its Build Action set to "Embedded resource".*
 Folder res can be placed anywhere in a project. 
 The res folder of an Android project can be used in a X-platform project by creating a linked folder, so you do not need to copy files:
-	Mklink /J C:\MyXPlatformApp\Asset\res C:\MyAndroidApp\app\src\main\res
-
+```	
+Mklink /J C:\MyXPlatformApp\Asset\res C:\MyAndroidApp\app\src\main\res
+```
 A library project referenced by other apps can have the res folder too, so many shared strings can be placd in a library. 
 
 Folder "values" has the default string values that are used if values cannot be found from other language folders 
