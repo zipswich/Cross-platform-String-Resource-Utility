@@ -60,7 +60,7 @@ Example:
 			XRUtils.Initialize(GetType() true, "es", "es");   
 	
 (Obsolete for Silverlight WP)Run the following immediately after InitializeComponent() to handle the app bar localization. 
-	XResourceUtils.InitializeApplicationBar(ApplicationBar) 
+	`XResourceUtils.InitializeApplicationBar(ApplicationBar) 
 
 In Xaml:
 Add namespace XResource:
@@ -80,11 +80,13 @@ Add namespace XResource:
     x:DefaultBindMode="OneWay">
 ```
 (Obsolete for Silverlight WP):
+```
 	<phone:PhoneApplicationPage
 		...
 		xmlns:XResource="clr-namespace:XResource;assembly=XResourceUtils"
 		...
 		DataContext ="{Binding RelativeSource={RelativeSource Self}}">
+```
 
 Add the converter XRConverter:
 ```
@@ -93,19 +95,24 @@ Add the converter XRConverter:
     </Page.Resources>
 ```
 (Obsolete for Silverlight WP):
+```
     <phone:PhoneApplicationPage.Resources>
         <XResource:XRStringConverter x:Key="XRConverter"/>
 		...
     </phone:PhoneApplicationPage.Resources>
+```
 
 Use data binding in controls:
 ```
 	<TextBlock Text="{x:Bind ConverterParameter=hello, Converter={StaticResource XRConverter}}"/>
 	<Button Content="{x:Bind ConverterParameter=thank_you, Converter={StaticResource XRConverter}}"/>
 ```
+
 (Obsolete for Silverlight WP) ApplicationBarIconButton and ApplicationBarMenuItem are different.  They cannot use data binding:
-	<ApplicationBarIconButton Text="param_name" IconUri="..." Click="..." />
+```    
+    <ApplicationBarIconButton Text="param_name" IconUri="..." Click="..." />
     <ApplicationBarMenuItem Text="param_name" Click="..."/>
+```
 
 In C# code:
 ```
