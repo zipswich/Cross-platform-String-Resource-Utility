@@ -123,7 +123,7 @@ string sParam =  XRUtils.GetString("param_name")
 
 The solution has a demo UWP app and a demo x-platform library in addition to the XResouceUtils.  You need only XResouceUtils for your own projects. 
 
-
+![XRUtils Demo App](https://github.com/zipswich/Cross-platform-String-Resource-Utility/blob/master/AppDemo/Assets/xrutils.gif)
 
 			
 
