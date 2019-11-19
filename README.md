@@ -124,7 +124,7 @@ string sParam =  XRUtils.GetString("param_name")
 The solution has a demo UWP app and a demo x-platform library in addition to the XResouceUtils.  You need only XResouceUtils for your own projects. 
 
 
-
+![XRUtils Demo](https://i.imgur.com/9VGNmve.gifv)
 			
 
 
