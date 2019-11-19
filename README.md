@@ -38,17 +38,19 @@ Folder "values" has the default string values that are used if values cannot be 
 (e.g. values-es for Spanish, values-it for Italian, values-ru for Russian).
 
 string.xml is in the Android string resource format:
-	<?xml version="1.0" encoding="utf-8"?>
-	<resources>
-	  <string name="thank_you">Спасибо!</string>
-	<resources>
-
-
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="thank_you">Спасибо!</string>
+<resources>
+```
 Run the following as early as possible (e.g. in the constructor of App) or after overriding language 
+```xml
 	XRUtils.InitializeInitialize(
             Type typeCalling,
             bool bReset = true,
             string sLanguageCodeParam = null);
+```	    
 Example:
             //Use the Spanish strings of a library
             XRUtils.Initialize(typeof(MyLibraryClass), true, "es");
@@ -62,6 +64,7 @@ Example:
 
 In Xaml:
 Add namespace XResource:
+```
 <Page
     x:Class="MyApp.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -75,7 +78,7 @@ Add namespace XResource:
     mc:Ignorable="d"
     RequestedTheme="Dark"
     x:DefaultBindMode="OneWay">
-
+```
 (Obsolete for Silverlight WP):
 	<phone:PhoneApplicationPage
 		...
@@ -84,10 +87,11 @@ Add namespace XResource:
 		DataContext ="{Binding RelativeSource={RelativeSource Self}}">
 
 Add the converter XRConverter:
+```
     <Page.Resources>
         <XResource:XRStringConverter x:Key="XRConverter"/>    
     </Page.Resources>
-
+```
 (Obsolete for Silverlight WP):
     <phone:PhoneApplicationPage.Resources>
         <XResource:XRStringConverter x:Key="XRConverter"/>
@@ -95,16 +99,18 @@ Add the converter XRConverter:
     </phone:PhoneApplicationPage.Resources>
 
 Use data binding in controls:
+```
 	<TextBlock Text="{x:Bind ConverterParameter=hello, Converter={StaticResource XRConverter}}"/>
 	<Button Content="{x:Bind ConverterParameter=thank_you, Converter={StaticResource XRConverter}}"/>
-
+```
 (Obsolete for Silverlight WP) ApplicationBarIconButton and ApplicationBarMenuItem are different.  They cannot use data binding:
 	<ApplicationBarIconButton Text="param_name" IconUri="..." Click="..." />
     <ApplicationBarMenuItem Text="param_name" Click="..."/>
 
 In C# code:
+```
 string sParam =  XRUtils.GetString("param_name")
-
+```
 
 The solution has a demo UWP app and a demo x-platform library in addition to the XResouceUtils.  You need only XResouceUtils for your own projects. 
 
