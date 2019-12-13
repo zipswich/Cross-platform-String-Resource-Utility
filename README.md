@@ -9,6 +9,7 @@ This simple library may be useful for the following scenarios:
 3. Using Android style string resources  for cross-platform development targeting Windows, iOS, Android, WebAssembly with Uno Platform.
 
 Setup instructions:
+
 One can finish setup and start using and testing XRUtils in a few minutes if string files already exist.
 
 Create a folder structure of Strings as following (similar to that of Android Projects):
