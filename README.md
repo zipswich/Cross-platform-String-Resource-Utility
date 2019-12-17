@@ -48,7 +48,7 @@ string.xml is in the Android string resource format:
 ```
 Run the following as early as possible (e.g. in the constructor of App) or after language overriding
 ```xml
-	XRUtils.InitializeInitialize(
+	XRUtils.Initialize(
             Type typeCalling,
             bool bReset = true,
             string sLanguageCodeParam = null);
