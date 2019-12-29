@@ -1,7 +1,7 @@
 # Cross-platform-String-Resource-Utility
 Android string resource style for all platforms: Windows, iOS, Android and Web Assembly
 
-This project was created out of the love for the simplicity and high maintainability of Android app string resources, and the reservation about the complexity of Windows app string resources (i.e. Resources.resw).
+This project was created out of the love for the simplicity and high maintainability of Android app string resources, and the reservation about the complexity of Windows app string resources (i.e. Resources.resw).  It has served 10 published apps by the author. 
 
 This simple library may be useful for the following scenarios:
 1. Reusing Android string resources for a Windows app.
