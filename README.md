@@ -9,6 +9,7 @@ This simple library may be useful for the following scenarios:
 3. Using Android style string resources  for cross-platform development targeting Windows, iOS, Android, WebAssembly with Uno Platform.
 
 Setup instructions:
+
 One can finish setup and start using and testing XRUtils in a few minutes if string files already exist.
 
 Create a folder structure of Strings as following (similar to that of Android Projects):
@@ -30,8 +31,9 @@ Create a folder structure of Strings as following (similar to that of Android Pr
 *IMPORTANT: each strings.xml must have its Build Action set to "Embedded resource".*
 Folder res can be placed anywhere in a project. 
 The res folder of an Android project can be used in a X-platform project by creating a linked folder, so you do not need to copy files:
-	Mklink /J C:\MyXPlatformApp\Asset\res C:\MyAndroidApp\app\src\main\res
-
+```	
+Mklink /J C:\MyXPlatformApp\Asset\res C:\MyAndroidApp\app\src\main\res
+```
 A library project referenced by other apps can have the res folder too, so many shared strings can be placd in a library. 
 
 Folder "values" has the default string values that are used if values cannot be found from other language folders 
@@ -46,7 +48,7 @@ string.xml is in the Android string resource format:
 ```
 Run the following as early as possible (e.g. in the constructor of App) or after language overriding
 ```xml
-	XRUtils.InitializeInitialize(
+	XRUtils.Initialize(
             Type typeCalling,
             bool bReset = true,
             string sLanguageCodeParam = null);
@@ -123,7 +125,7 @@ string sParam =  XRUtils.GetString("param_name")
 
 The solution has a demo UWP app and a demo x-platform library in addition to the XResouceUtils.  You need only XResouceUtils for your own projects. 
 
-
+![XRUtils Demo App](https://github.com/zipswich/Cross-platform-String-Resource-Utility/blob/master/AppDemo/Assets/xrutils.gif)
 
 			
 
