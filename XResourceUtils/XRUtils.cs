@@ -152,7 +152,9 @@ namespace XResourceUtils
                         {
                             sValue = m.Groups["value"].Value;
                         }
-                        dictStrings.Add(xe.Attribute("name").Value, sValue);
+                        //dictStrings.Add((xe.Attribute("name").Value, sValue) throws an exception if a value with the specified key already exists 
+                        //If the specified key already exists in the dictStrings, the following overwrites the old value
+                        dictStrings[xe.Attribute("name").Value] = sValue;
                     }
 
                     //Obsolete
@@ -242,6 +244,7 @@ namespace XResourceUtils
                         }
                     }
                 }
+                sReturn = sReturn.Replace("\\'", "'");
             }
             catch (Exception ex)
             {
